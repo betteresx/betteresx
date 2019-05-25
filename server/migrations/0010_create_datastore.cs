@@ -1,7 +1,7 @@
 using FluentMigrator;
 
 
-[Migration(9)]
+[Migration(10)]
 public class CreateBetterESXAddons : Migration
 {
     public override void Up()
