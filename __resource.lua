@@ -2,7 +2,13 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 version '0.1.0'
 
-dependency 'fxmigrant'
+dependencies {
+	'fxmigrant',
+	'mysql-async',
+	'essentialmode',
+	'esplugin_mysql',
+	'async'
+}
 
 description 'BetterESX for EssentialMode'
 
@@ -22,15 +28,15 @@ server_scripts {
 	'@mysql-async/lib/MySQL.lua',
 	'@fxmigrant/helper.lua',
 
-	'locale.lua',
-	'locales/de.lua',
-	'locales/br.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/fi.lua',
-	'locales/sv.lua',
-	'locales/pl.lua',
-	'locales/cs.lua',
+	'common/locale.lua',
+	'common/locales/de.lua',
+	'common/locales/br.lua',
+	'common/locales/fr.lua',
+	'common/locales/en.lua',
+	'common/locales/fi.lua',
+	'common/locales/sv.lua',
+	'common/locales/pl.lua',
+	'common/locales/cs.lua',
 
 	'common/config/config.lua',
 	'common/config/config.weapons.lua',
@@ -48,15 +54,15 @@ server_scripts {
 }
 
 client_scripts {
-	'locale.lua',
-	'locales/de.lua',
-	'locales/br.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/fi.lua',
-	'locales/sv.lua',
-	'locales/pl.lua',
-	'locales/cs.lua',
+	'common/locale.lua',
+	'common/locales/de.lua',
+	'common/locales/br.lua',
+	'common/locales/fr.lua',
+	'common/locales/en.lua',
+	'common/locales/fi.lua',
+	'common/locales/sv.lua',
+	'common/locales/pl.lua',
+	'common/locales/cs.lua',
 
 	'common/config/config.lua',
 	'common/config/config.weapons.lua',
@@ -81,7 +87,7 @@ ui_page {
 }
 
 files {
-	'locale.js',
+	'common/locale.js',
 	'html/ui.html',
 
 	'html/css/app.css',
@@ -103,11 +109,4 @@ exports {
 
 server_exports {
 	'getSharedObject'
-}
-
-dependencies {
-	'mysql-async',
-	'essentialmode',
-	'esplugin_mysql',
-	'async'
 }
