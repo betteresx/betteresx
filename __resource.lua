@@ -21,6 +21,7 @@ migration_files {
 	'server/migrations/0006_populate_jobs.cs',
 	'server/migrations/0007_create_user_accounts.cs',
 	'server/migrations/0008_create_user_inventory.cs'
+	'server/migrations/0009_create_addons.cs'
 }
 
 server_scripts {
