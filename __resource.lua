@@ -32,8 +32,8 @@ server_scripts {
 	'locales/pl.lua',
 	'locales/cs.lua',
 
-	'config.lua',
-	'config.weapons.lua',
+	'common/config/config.lua',
+	'common/config/config.weapons.lua',
 
 	'server/common.lua',
 	'server/classes/player.lua',
@@ -58,8 +58,8 @@ client_scripts {
 	'locales/pl.lua',
 	'locales/cs.lua',
 
-	'config.lua',
-	'config.weapons.lua',
+	'common/config/config.lua',
+	'common/config/config.weapons.lua',
 
 	'client/common.lua',
 	'client/entityiter.lua',
