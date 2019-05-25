@@ -1,12 +1,26 @@
 resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
-description 'ES Extended'
-
 version '0.1.0'
+
+dependency 'fxmigrant'
+
+description 'BetterESX for EssentialMode'
+
+migration_files {
+    'migrations/0001_add_users.cs',
+	'migrations/0002_create_items.cs',
+	'migrations/0003_create_job_grades.cs',
+	'migrations/0004_populate_job_grades.cs',
+	'migrations/0005_create_jobs.cs',
+	'migrations/0006_populate_jobs.cs',
+	'migrations/0007_create_user_accounts.cs',
+	'migrations/0008_create_user_inventory.cs'
+}
 
 server_scripts {
 	'@async/async.lua',
 	'@mysql-async/lib/MySQL.lua',
+	'@fxmigrant/helper.lua',
 
 	'locale.lua',
 	'locales/de.lua',
