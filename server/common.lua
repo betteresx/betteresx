@@ -18,7 +18,7 @@ function getSharedObject()
 	return ESX
 end
 
-MySQL.ready(function()
+Migrant.ready(function()
 	MySQL.Async.fetchAll('SELECT * FROM items', {}, function(result)
 		for i=1, #result, 1 do
 			ESX.Items[result[i].name] = {
